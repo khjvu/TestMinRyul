@@ -834,7 +834,24 @@ background-size: cover; margin: 0;}
 
 
 /*-----------tab-----------*/
+.tab-contents:not(:target) {
+    display: none;
+}
 
+.tab-contents:target {
+    display: block;
+}
+
+
+@media (max-width:600px) {
+    .widget {
+        display: none;
+    }
+}
+
+
+
+/*
 .b_tab ul li.activeClass{font-weight: bold; font-size: 20px;}
 .b_tab ul li.activeClass{font-weight: bold; font-size: 20px;}
 .sm_select {display: none;}
@@ -845,6 +862,7 @@ background-size: cover; margin: 0;}
       .sm_select {display: block;}
       .b_tab{display: none;}
  }
+*/
 
 
 

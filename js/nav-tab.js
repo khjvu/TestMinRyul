@@ -1,40 +1,33 @@
-(function (global, $) {
+var navLink = $('.nav-menu li'),
+    tabLink = $('.tabnav li'),
+    currenUrl = location.href,
+    tabContent = $('.tabcontent > div');
 
-    var $menu     = $('.floating-menu li.m'),
-        $contents = $('.scroll'),
-        $doc      = $('html, body');
-    $(function () {
-        // 해당 섹션으로 스크롤 이동
-        $menu.on('click','a', function(e){
-            var $target = $(this).parent(),
-                idx     = $target.index(),
-                section = $contents.eq(idx),
-                offsetTop = section.offset().top;
-            $doc.stop()
-                    .animate({
-                        scrollTop :offsetTop
-                    }, 800);
-            return false;
-        });
-    });
+tabLink.add(navLink).click(function (e) {
+    e.preventDefault();
+    var targetIdx = $(this).index();
 
-    // menu class 추가
-    $(window).scroll(function(){
-        var scltop = $(window).scrollTop();
-        $.each($contents, function(idx, item){
-            var $target   = $contents.eq(idx),
-                i         = $target.index(),
-                targetTop = $target.offset().top;
+    activeteTab(targetIdx);
+});
 
-            if (targetTop <= scltop) {
-                $menu.removeClass('on');
-                $menu.eq(idx).addClass('on');
-            }
-            if (!(200 <= scltop)) {
-                $menu.removeClass('on');
-            }
-        })
+navLink.each(function (i) {
+    var compareUrl = $(this).find('a').attr('href');
+    var active = currenUrl.indexOf(compareUrl);
+    var blank = currenUrl.indexOf('#');
+    console.log(active);
 
-    });
+    if (active > -1) {
+        activeteTab(i);
+    }
+    if (blank == -1) {
+        activeteTab(0);
+    }
+});
 
-}(window, window.jQuery));
+
+function activeteTab(idx) {
+    tabContent.hide();
+    tabLink.find('a').removeClass('active');
+    tabLink.eq(idx).find('a').addClass('active');
+    tabContent.eq(idx).show();
+}

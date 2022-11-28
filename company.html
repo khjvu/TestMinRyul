@@ -41,20 +41,20 @@
                         <div class="col-md-9 col-sm-12">
                             <div id="navigation" class="navigation navbar-right">
                                 <ul>
-                                    <li class="active"><a href="company.html" title="회사소개" class="animsition-link">회사소개</a>
-                                        <ul>
-                                            <li><a href="#" class="animsition-link">인사말</a></li>
-                                            <li><a href="#" class="animsition-link">찾아오시는길</a></li>
+                                    <li class="active"><a href="company.html#com1" title="회사소개" class="animsition-link">회사소개</a>
+                                        <ul class="nav-menu">
+                                            <li><a href="company.html#com1">인사말</a></li>
+                                            <li><a href="company.html#com2">찾아오시는길</a></li>
                                         </ul>
                                     
                                     </li>
                                     <li><a href="service.html" title="세무서비스" class="animsition-link">세무서비스</a>
                                     </li>
-                                    <li><a href="taxnews.html" title="세무자료실" class="animsition-link">세무자료실</a>
-                                    <ul>
-                                        <li><a href="#" class="animsition-link">세무소식</a></li>
-                                        <li><a href="https://www.bizinfo.go.kr/web/index.do" class="animsition-link">정책자금</a></li>
-                                        <li><a href="#" class="animsition-link">세무자료</a></li>
+                                    <li><a href="taxnews.html#tax1" title="세무자료실">세무자료실</a>
+                                    <ul class="nav-menu">
+                                        <li><a href="taxnews.html#tax1">세무소식</a></li>
+                                        <li><a href="taxnews.html#tax2">정책자금</a></li>
+                                        <li><a href="taxnews.html#tax3">세무자료</a></li>
                                     </ul>
                                     
                                     </li>
@@ -64,7 +64,7 @@
                                         <ul>
                                             <li><a href="#" class="animsition-link">카카오톡문의</a></li>
 <!--                                            <li><a href="#" class="animsition-link">온라인상담</a></li>-->
-                                            <li><a href="#" class="animsition-link">세무서비스 의뢰</a></li>
+                                            <li><a href="contactUs.html" class="animsition-link">세무서비스 의뢰</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -103,32 +103,34 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-md-3 col-sm-3 tabnav">
+                <div class="col-md-3 col-sm-3">
                     <div class="sidebar-area">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <div class=" widget widget-category pinside30 outline mb40">
                                     <h3 class="widget-title mb30">회사소개</h3>
                                     <div class="b_tab">
-                                    <ul class="listnone bullet bullet-arrow-right mb0">
-                                        <li><a href="#tab1">인사말</a></li>
-                                        <li><a href="#tab2">찾아오시는길</a></li>
+                                    <ul class="listnone bullet bullet-arrow-right mb0 tabnav">
+                                        <li><a href="#com1" class="active">인사말</a></li>
+                                        <li><a href="#com2">찾아오시는길</a></li>
                                     </ul>
                                     </div>
+<!--
                                     <div class="sm_select">
                                         <select name="" id="tabmenu">
-                                            <option value="#tab1">인사말</option>
-                                            <option value="#tab2">찾아오시는길</option>
+                                            <option value="#com1">인사말</option>
+                                            <option value="#com2">찾아오시는길</option>
                                         </select>
                                     </div>
+-->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+<div id="tab-content">
                 <div class="col-md-9 col-sm-9 tabcontent">
-                    <div id="tab1" class="content-area tab-contents">
+                    <div id="com1" class="content-area tab-contents">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <div class="">
@@ -174,7 +176,7 @@
                     </div>
                 </div>
                 <div class="col-md-9 col-sm-9 tabcontent">
-                    <div id="tab2" class="content-area tab-contents">
+                    <div id="com2" class="content-area tab-contents">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <div class="mb60 section-title">
@@ -192,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-
+</div>
                 </div>
                 </div>
                 </div>
@@ -249,7 +251,7 @@
         });
 
     </script>
-    <script type="text/javascript" src="js/tab.js"></script>
+
     <!-- animsition -->
     <script type="text/javascript" src="js/animsition.js"></script>
     <script type="text/javascript" src="js/animsition-script.js"></script>
